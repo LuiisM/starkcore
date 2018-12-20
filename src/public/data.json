@@ -1,0 +1,81 @@
+[
+{
+  "id": 1,
+  "title": "West Palm Beach, Florida 33401 - Oakland Park, Florida 33304",
+  "content": "Dining table",
+  "date": "Monday 10th 2:29 PM",
+  "offer": 300,
+  "status": "inprogress",
+  "category": "sale",
+  "selected": false
+},
+{
+  "id": 2,
+  "title": "Lacey Township, NJ 08731 - Brooklyn, New York 11205",
+  "content": "2016 Nissan LEAF",
+  "date": "Monday 10th 2:29 PM",
+  "offer": 500,
+  "status": "delivered",
+  "category": "priority",
+  "selected": false
+},
+{
+  "id": 3,
+  "title": "Stockbridge, Georgia 30281, Estados Unidos - Royal Oak, Michigan 48073, Estados Unidos",
+  "content": "2006 Jeep Wrangler",
+  "date": "Monday 10th 2:29 PM",
+  "offer": 100,
+  "status": "In Progress",
+  "category": "sale",
+  "selected": false
+},
+{
+  "id": 4,
+  "title": "West Palm Beach, Florida 33401 - Oakland Park, Florida 33304",
+  "content": "Dining table",
+  "date": "Monday 10th 2:29 PM",
+  "offer": 200,
+  "status": "inprogress",
+  "category": "bookmarked",
+  "selected": false
+},
+{
+  "id": 5,
+  "title": "Los Angeles, California 90024, Estados Unidos - Dartmouth, Massachusetts 02747, Estados Unidos",
+  "content": "Dining table",
+  "date": "Monday 10th 2:29 PM",
+  "offer": 200,
+  "status": "In Progress",
+  "category": "priority",
+  "selected": false
+},
+{
+  "id": 6,
+  "title": "Basinger, Florida 34972, Estados Unidos - Brooksburg, Indiana 47250, Estados Unidos",
+  "content": "Dining table",
+  "date": "Monday 10th 2:29 PM",
+  "offer": 200,
+  "status": "In Progress",
+  "category": "sale",
+  "selected": false
+},
+{
+  "id": 7,
+  "title": "San Francisco, California 94118, Estados Unidos - Oradell, New Jersey 07649, Estados Unidos",
+  "content": "Dining table",
+  "date": "Monday 10th 2:29 PM",
+  "offer": 200,
+  "status": "delivered",
+  "category": "priority",
+  "selected": false
+},
+{
+  "id": 8,
+  "title": "Arlington, Texas 76003, Estados Unidos - Smith Center, Kansas 66967, Estados Unidos",
+  "content": "Dining table",
+  "date": "Monday 10th 2:29 PM",
+  "offer": 200,
+  "status": "In Progress",
+  "category": "sale",
+  "selected": false
+}]

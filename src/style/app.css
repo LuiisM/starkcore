@@ -1,0 +1,200 @@
+/* styles in src/style directory are applied to the whole page */
+header {
+  background: #e6e6e6 !important;
+}
+/* Just for example */
+html {
+  background-color: #f1f2f3;
+}
+.left-icons{
+	width: 80% !important;
+  margin-top: 12px;
+}
+.checkbox-align-left{
+  float: left;
+}
+.vertical-divider{
+  min-height: 425px !important;
+}
+
+/* -----------------------------
+Switch */
+
+.uk-switch {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  width: 56px;
+}
+
+/* Hide default HTML checkbox */
+.uk-switch input {
+  display:none;
+}
+/* Slider */
+.uk-switch-slider {
+  background-color: rgba(0,0,0,0.22);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 30px;
+  bottom: 0;
+  cursor: pointer;
+  transition-property: background-color;
+	transition-duration: .2s;
+}
+/* Switch pointer */
+.uk-switch-slider:before {
+  content: '';
+  background-color: #fff;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  transition-property: transform, box-shadow;
+	transition-duration: .2s;
+}
+/* Slider active color */
+input:checked + .uk-switch-slider {
+  background-color: #39f !important;
+}
+/* Pointer active animation */
+input:checked + .uk-switch-slider:before {
+  transform: translateX(26px);
+}
+
+/* Modifiers */
+.uk-switch-slider.uk-switch-on-off {
+  background-color: #f0506e;
+}
+input:checked + .uk-switch-slider.uk-switch-on-off {
+  background-color: #32d296 !important;
+}
+
+/* Style Modifier */
+.uk-switch-slider.uk-switch-big:before {
+  transform: scale(1.2);
+  box-shadow: 0 0 6px rgba(0,0,0,0.22);
+}
+input:checked + .uk-switch-slider.uk-switch-big:before {
+  transform: translateX(26px) scale(1.2);
+}
+
+/* Inverse Modifier - affects only default */
+.uk-light .uk-switch-slider:not(.uk-switch-on-off) {
+  background-color: rgba(255,255,255,0.22);
+}
+
+/* Fab button*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500);
+p.credits {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.credits img {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.container {
+  bottom: 0;
+  position: fixed;
+  margin: 1em;
+  right: 0px;
+}
+
+.buttons {
+  box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 
+              0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 20px auto 0;
+  position: relative;
+  -webkit-transition: all .1s ease-out;
+          transition: all .1s ease-out;  
+}
+
+.buttons:active, 
+.buttons:focus, 
+.buttons:hover {
+  box-shadow: 0 0 4px rgba(0,0,0,.14),
+    0 4px 8px rgba(0,0,0,.28);
+}
+
+.buttons:not(:last-child) {
+  width: 40px;
+  height: 40px;
+  margin: 20px auto 0;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.container:hover 
+.buttons:not(:last-child) {
+  opacity: 1;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  margin: 15px auto 0;
+}
+
+/* Unessential styling for sliding up buttons at differnt speeds */
+
+.buttons:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+          transition-delay: 25ms;
+  background-image: url('../public/img/add.svg');
+  background-size: contain;
+}
+
+.buttons:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 50ms;
+          transition-delay: 20ms;
+  background-size: contain;
+}
+
+.buttons:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 75ms;
+          transition-delay: 40ms;
+  background-size: contain;
+}
+
+.buttons:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 100ms;
+          transition-delay: 60ms;
+background-size: contain;
+}
+
+/* Show tooltip content on hover */
+
+[tooltip]:before {
+  bottom: 25%;
+  font-family: arial;
+  font-weight: 600;
+  border-radius: 2px;
+  background: #585858;
+  color: #fff;
+  content: attr(tooltip);
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 5px 7px;
+  margin-right: 12px;
+  position: absolute;
+  right: 100%;
+  white-space: nowrap;
+}
+
+[tooltip]:hover:before,
+[tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}

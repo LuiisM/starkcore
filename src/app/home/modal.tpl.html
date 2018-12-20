@@ -1,0 +1,52 @@
+<!-- Modal para crear un nuevo shipment -->
+<div id="savecard" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+    <h2 class="uk-modal-title">New Shipment</h2>
+    <form name="newshipmentform">
+      <fieldset class="uk-fieldset">
+        <legend class="uk-legend">Please fill in all the required fields</legend>
+        <div class="uk-margin">
+          <input class="uk-input" ng-model="home.form.origin" type="text" placeholder="Origin" required>
+        </div>
+        <div class="uk-margin">
+          <input class="uk-input" ng-model="home.form.destination" type="text" placeholder="Destination" required>
+        </div>
+        <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+          <div>
+            <select class="uk-select"  ng-model="home.form.day" required>
+              <option ng-repeat="day in home.days track by $index" ng-value="day">{{day}}</option>
+            </select>
+          </div>
+          <div>
+            <select class="uk-select" ng-model="home.form.month" required>
+              <option ng-repeat="month in home.months track by $index" ng-value="month">{{month}}</option>
+            </select> </div>
+          <div>
+            <select class="uk-select" ng-model="home.form.year" ng-change="home.calendar()" required>
+              <option ng-repeat="year in home.years track by $index" ng-value="year">{{year}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="uk-margin">
+          <textarea class="uk-textarea" rows="5" ng-model="home.form.content" ng-maxlength="30" placeholder="Describe your shipment" required></textarea>
+        </div>
+        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+           <span class="uk-text-muted">Category</span>
+            <label ng-repeat="radio in home.radios"><input class="uk-radio" type="radio" name="radio1" ng-model="home.form.category" ng-value="radio.name" required> {{radio.name | uppercase}}</label>
+        </div>
+        <div class="uk-margin">
+          <input class="uk-input" type="number" ng-maxlength="6" ng-model="home.form.offer" placeholder="Offer $">
+        </div>
+         <div class="uk-margin">
+                <select class="uk-select" ng-model="home.form.status" required>
+                  <option ng-repeat="item in home.status track by $index" ng-value="item.name">{{item.name}}</option>
+                </select>
+              </div>
+      </fieldset>
+    </form>
+    <p class="uk-text-right">
+      <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+      <button class="uk-button uk-button-primary" type="button" ng-click="home.save(newshipmentform)">Save</button>
+    </p>
+  </div>
+</div>
